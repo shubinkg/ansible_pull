@@ -4,5 +4,9 @@
   become: true
   become_method: sudo
   become_user: root
-  roles:
-    - test
+
+  tasks:
+  - name: Creates directory
+    file:
+      path: /test/test_2
+      state: directory
